@@ -1,0 +1,18 @@
+dataset_root: "/workspace/lerobot_dataset/pend_balance"
+repo_id: "pend_balance"
+output_directory: "/home/ubuntu/checkpoints/train/pend_balance_act"
+config_path: "/workspace/training/pend_features.py"
+
+device: "cpu"
+training_steps: 3000
+log_freq: 50
+num_workers: 2
+batch_size: 64
+chunk_size: 10
+n_action_steps: 1
+learning_rate: 0.0001
+delta_timestamps:
+  observation.environment_state: [0.0]
+  observation.state: [0.0]
+  action: [0.0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18]
+

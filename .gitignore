@@ -1,0 +1,27 @@
+# colcon build で作り直せる生成物
+/build/
+/install/
+/log/
+
+# 参照用・一時ファイル（GitHub には入れない）
+/2DRoboPrac_ws/
+/pai_training/
+/pai_training_src.tgz
+/pixi_install.log
+
+# 学習済みモデル（100 MB を超えるため GitHub Releases で配布）
+/models/
+
+# 学習に使っていない記録（pend_run01〜10）
+/bags/pend_run0*/
+/bags/pend_run10/
+/dataset_npz/pend_run0*.npz
+/dataset_npz/pend_run10.npz
+
+# SDF のバックアップ
+*.sdf.bak*
+
+# Python・W&B
+__pycache__/
+*.pyc
+wandb/
