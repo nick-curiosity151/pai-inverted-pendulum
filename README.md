@@ -2,7 +2,7 @@
 
 Physical AI 講座「応用1」最終課題。Gazebo と ROS 2 で差動二輪ロボットを車輪型倒立振子に改造し、PID 系の状態フィードバック制御で倒立させたうえで、その記録データから ACT（Action Chunking with Transformers）を模倣学習させて制御を置き換える試みを行いました。
 
-- 動画：<[YouTube の URL](https://youtu.be/ciCFZFjH4Fg)>
+- 動画：[YouTube](https://youtu.be/ciCFZFjH4Fg)
 
 ## 結果の概要
 
@@ -160,7 +160,7 @@ WANDB_MODE=offline pixi run --no-install train
 
 ### ACT で制御する
 
-学習済みモデルを [Releases](../../releases) からダウンロードし、`models/pend_balance_act/`（`config.json` と `model.safetensors`）に置きます。自分で学習した場合は、そのフォルダを引数で指定します。
+学習済みモデルを [Releases](https://github.com/nick-curiosity151/pai-inverted-pendulum/releases) からダウンロードし、`models/pend_balance_act/`（`config.json` と `model.safetensors`）に置きます。自分で学習した場合は、そのフォルダを引数で指定します。
 
 PID のときのターミナル 3 の代わりに、次を実行します（balance_node は起動しない）。
 
